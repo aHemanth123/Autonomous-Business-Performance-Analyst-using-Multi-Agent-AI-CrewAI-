@@ -25,17 +25,17 @@ Each agent operates independently but collaborates via explicit task dependencie
 
 ## 🏗️ System Architecture
 
-CSV Business Data
-↓
-Data Ingestion Agent
-↓
-Trend Analysis Agent and Anomaly Detection Agent
-↓
-Business Insight Agent
-↓
-Report Generator Agent
-↓
-Executive PDF Report
+CSV Business Data        
+↓                   
+Data Ingestion Agent                       
+↓                                     
+Trend Analysis Agent and Anomaly Detection Agent                                     
+↓                                   
+Business Insight Agent                         
+↓                                
+Report Generator Agent              
+↓                                          
+Executive PDF Report                        
 
 
 ---
@@ -81,7 +81,6 @@ Executive PDF Report
 - Git
 - Virtual environment support
 
----
 
 ### 2️⃣ Create Virtual Environment
 
