@@ -1,0 +1,44 @@
+load_data_task:
+  description: |
+    Analyze the provided business dataset.
+
+    {{ business_data }}
+
+    Produce a clean analytical summary with KPIs.
+  expected_output: Clean data summary
+
+trend_analysis_task:
+  description: |
+    Using the ingested data summary:
+    - Identify revenue trends
+    - Highlight growth/decline patterns
+    - Analyze regional performance
+  expected_output: Trend analysis insights
+
+anomaly_detection_task:
+  description: |
+    Identify anomalies such as:
+    - Sudden spikes or drops
+    - Unusual sales behavior
+    - Risk indicators
+  expected_output: Detected anomalies
+
+business_insight_task:
+  description: |
+    Combine trend analysis and anomaly detection to:
+    - Derive business insights
+    - Recommend strategic actions
+    - Highlight risks and opportunities
+  expected_output: Business recommendations
+
+report_generation_task:
+  description: |
+    Create an executive-level **PDF report** that includes:
+    Report Date: {{ report_date }}
+
+    - Business insights
+    - Supporting trends
+    - Detected anomalies
+
+    The tone should be professional and decision-oriented.
+  expected_output: Final business performance report (PDF)
