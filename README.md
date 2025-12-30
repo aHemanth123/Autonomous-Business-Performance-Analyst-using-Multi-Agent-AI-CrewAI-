@@ -90,13 +90,31 @@ python -m venv venv
 
 ```
 
-Activate 
-venv\Scripts\activate      # Windows
-# source venv/bin/activate # macOS/Linux
+ 
+### 3️⃣ Activate Virtual Environment (macOS / Linux)
 
+```bash
+source venv/bin/activate
+```
 
-# Install Dependencies
+### 4️⃣  Install dependencies
+
+```bash
 pip install -r requirements.txt
+```
+
+###  5️⃣ Set API Key (If Using OpenAI)
+
+```bash
+setx OPENAI_API_KEY "your_api_key_here"
+```
+
+
+### 6️⃣ Run the Project
+
+```bash
+crewai run
+```
 
  
 
