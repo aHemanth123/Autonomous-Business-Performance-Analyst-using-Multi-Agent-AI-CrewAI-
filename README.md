@@ -1,111 +1,102 @@
-<<<<<<< HEAD
-# PerformanceAnalyst Crew
+# Autonomous  Performance Analyst
 
-Welcome to the PerformanceAnalyst Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+An **agentic AI system** that autonomously analyzes business performance data, detects trends and anomalies, generates executive-level insights, and produces a **real PDF business report** using a coordinated **multi-agent architecture** built with **CrewAI**.
 
-## Installation
+---
 
-Ensure you have Python >=3.10 <3.14 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
+## 📌 Project Overview
 
-First, if you haven't already, install uv:
+This project demonstrates how **Multi-Agent AI** can be applied to real-world business analytics problems.
 
-```bash
-pip install uv
-```
+Instead of a single LLM prompt, the system uses **specialized agents**, each responsible for a specific analytical task, collaborating through **explicit task context chaining** to deliver decision-ready insights.
 
-Next, navigate to your project directory and install the dependencies:
+---
 
-(Optional) Lock the dependencies and install them by using the CLI command:
-```bash
-crewai install
-```
-### Customizing
+## 🧠 Why Multi-Agent AI?
 
-**Add your `OPENAI_API_KEY` into the `.env` file**
+- Clear separation of responsibilities  
+- Improved reasoning quality  
+- Deterministic task execution  
+- Scalable and maintainable architecture  
 
-- Modify `src/performance_analyst/config/agents.yaml` to define your agents
-- Modify `src/performance_analyst/config/tasks.yaml` to define your tasks
-- Modify `src/performance_analyst/crew.py` to add your own logic, tools and specific args
-- Modify `src/performance_analyst/main.py` to add custom inputs for your agents and tasks
+Each agent operates independently but collaborates via explicit task dependencies.
 
-## Running the Project
+---
 
-To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
+## 🏗️ System Architecture
 
-```bash
-$ crewai run
-```
+CSV Business Data
+↓
+Data Ingestion Agent
+↓
+Trend Analysis Agent and Anomaly Detection Agent
+↓
+Business Insight Agent
+↓
+Report Generator Agent
+↓
+Executive PDF Report
 
-This command initializes the performance_analyst Crew, assembling the agents and assigning them tasks as defined in your configuration.
 
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
+---
 
-## Understanding Your Crew
+## 🤖 Agents
 
-The performance_analyst Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
+| Agent | Responsibility |
+|-----|----------------|
+| **Data Ingestion Agent** | Reads CSV data, extracts KPIs, and summarizes the dataset |
+| **Trend Analysis Agent** | Identifies revenue and sales trends over time |
+| **Anomaly Detection Agent** | Detects unusual spikes, drops, or risk signals |
+| **Business Insight Agent** | Converts analytics into strategic recommendations |
+| **Report Generator Agent** | Produces an executive-ready PDF report |
 
-## Support
+---
 
-For support, questions, or feedback regarding the PerformanceAnalyst Crew or crewAI.
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
-- [Chat with our docs](https://chatg.pt/DWjSBZn)
+## 📊 Data
 
-Let's create wonders together with the power and simplicity of crewAI.
-=======
-# PerformanceAnalyst Crew
+- **Input Format:** CSV  
+- **Fields:**  
+  - `date` (parsed as datetime)  
+  - `region`  
+  - `revenue`  
+  - `sales`  
+- Supports time-series and region-wise analysis
 
-Welcome to the PerformanceAnalyst Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+---
 
-## Installation
+## 🧩 Tech Stack
 
-Ensure you have Python >=3.10 <3.14 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
+- **Python**
+- **CrewAI** (Multi-Agent Orchestration)
+- **Pandas** (Data Processing)
+- **ReportLab** (PDF Generation)
+- **LLMs** (Ollama / OpenAI compatible)
 
-First, if you haven't already, install uv:
+--- 
+## ⚙️ Setup Instructions
 
-```bash
-pip install uv
-```
+### 1️⃣ Prerequisites
 
-Next, navigate to your project directory and install the dependencies:
+- Python **>= 3.10**
+- Git
+- Virtual environment support
 
-(Optional) Lock the dependencies and install them by using the CLI command:
-```bash
-crewai install
-```
-### Customizing
+---
 
-**Add your `OPENAI_API_KEY` into the `.env` file**
-
-- Modify `src/performance_analyst/config/agents.yaml` to define your agents
-- Modify `src/performance_analyst/config/tasks.yaml` to define your tasks
-- Modify `src/performance_analyst/crew.py` to add your own logic, tools and specific args
-- Modify `src/performance_analyst/main.py` to add custom inputs for your agents and tasks
-
-## Running the Project
-
-To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
+### 2️⃣ Create Virtual Environment
 
 ```bash
-$ crewai run
+python -m venv venv
+
 ```
 
-This command initializes the performance_analyst Crew, assembling the agents and assigning them tasks as defined in your configuration.
+Activate 
+venv\Scripts\activate      # Windows
+# source venv/bin/activate # macOS/Linux
 
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
 
-## Understanding Your Crew
+# Install Dependencies
+pip install -r requirements.txt
 
-The performance_analyst Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
+ 
 
-## Support
-
-For support, questions, or feedback regarding the PerformanceAnalyst Crew or crewAI.
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
-- [Chat with our docs](https://chatg.pt/DWjSBZn)
-
-Let's create wonders together with the power and simplicity of crewAI.
->>>>>>> 43be04e7cc493dc7a65f76c0c5b598772f91571e
